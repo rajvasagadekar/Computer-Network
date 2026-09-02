@@ -9,7 +9,7 @@ int main()
     cout << "Enter data bits: ";
     cin >> data;
 
-    cout << "Enter generator bits: ";
+    cout << "Enter generator bits (Diviser):  ";
     cin >> generator;
 
     int generatorLength = generator.length();
@@ -40,13 +40,13 @@ int main()
     string remainder = temp.substr(
         temp.length() - (generatorLength - 1)
     );
-    
+
     string codeword = data + remainder;
 
     cout << "\n----- CRC Sender Side -----" << endl;
     cout << "Data bits        : " << data << endl;
-    cout << "Generator bits   : " << generator << endl;
-    cout << "Zero appended    : " << zeroAppended << endl;
+    cout << "Generator bits (Diviser): " << generator << endl;
+    cout << "Zero appended  (D-1) : " << zeroAppended << endl;
     cout << "Redundancy bits  : " << remainder << endl;
     cout << "Codeword         : " << codeword << endl;
 
